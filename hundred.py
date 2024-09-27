@@ -4,7 +4,7 @@ import json
 from random import randint
 from math import ceil
 
-CLIENT_ID = "af39fd430e9445fdb3c05f0352504bf7"
+CLIENT_ID = open("clientid.txt",'r').read()
 SECRET = open("secret.txt",'r').read()
 
 def getauthorizeurl():
@@ -206,16 +206,3 @@ def main():
 if __name__=="__main__":
 	main()
 	quit()
-
-
-url = 'https://api.spotify.com'
-
-
-headers = {
-    'Authorization': 'Bearer '+token
-}
-
-resp = requests.get(url, headers=headers)
-
-print(resp.status_code)
-#BQBirGqgmNbYbyWF2C5ashb6a8KWkYOZHX4xRfxHB7Cn_bB4QqekX-FyS646YIGFBJ2Ekwp0GsJJUL4X1VWiHVFvsiaArsvVRsL9ZLkNftpSF-W5XkjTFDkY9QUHTX13kdOp4Pfm2qV5RRFY8niTEDwRGKfzhQzrrZkkKHlAQwTwYoskbrOnFix83osUWtKbEzhy2u8j4CHy2Q*AQDBry5PRe7facvyXo43paRzWHHQ4YISk91f8WElCgSgxTtDSTtQRy7q76cHWPWfBd-9RmkvRcClL9pVPgba-P_R02sVBeLGCal2Drki0FMGiNhHjBs_mRFO0LlEfipUkRk
